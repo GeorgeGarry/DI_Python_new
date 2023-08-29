@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    hello {% if gender == "male" %}Mr {% elif gender == "female" %}Mrs {% endif %} {{ name }}
+    {% for hoppy in hoppies %}
+        <h2>my hoppy is {{ hoppy }}</h2>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--at this point - I've no clue how to do it otherwise-->
+{% for animal in filtered_animal %}
+    <h3>This is the animal with id {{animal.id}}</h3>
+{% endfor %}
+<!--<h3>This is the animal with id {{id}}</h3>-->
+    <ul>
+        {% for animal in filtered_animal %}
+            <li>name: {{animal.name}}</li>
+            <li>legs: {{animal.legs}}</li>
+            <li>weight: {{animal.weight}}</li>
+            <li>height: {{animal.height}}</li>
+            <li>speed: {{animal.speed}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

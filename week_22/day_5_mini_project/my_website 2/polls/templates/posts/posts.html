@@ -1,0 +1,14 @@
+{% extends 'posts/homepage.html' %}
+
+    {% block content %}
+    {# It's a comment #}
+    {{ block.super }} {# get the content of the block from the parent template #}
+    <h4>Today we are going to talk about</h4>
+    <ul> 
+        {% for x in subjects %} 
+        <li>{{ x.title | title }} by {{ x.author}}</li> 
+        {% endfor %} 
+    </ul>
+{% endblock content %}
+
+
