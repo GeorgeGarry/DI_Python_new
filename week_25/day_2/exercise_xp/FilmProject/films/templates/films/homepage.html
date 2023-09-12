@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FilmProject</title>
+</head>
+{% extends 'partials/base.html' %}
+
+{% block content %}
+{% include 'partials/navbar.html' %}
+
+<!-- Add content for your homepage below -->
+<div class="container mt-4">
+   <h1>Welcome to FilmProject</h1>
+    <ol>
+        {% for films, reviews in all_films%}
+            <li>
+                <ul>
+                    <li>Title: {{films.title}}</li>
+                    <li>Released: {{films.release_date}}</li>
+                    <li>Created in country: {{films.created_in_country}}</li>
+                    <div>
+                        {%for review in reviews%}
+                            <p>{{review.review_text}}</p>
+                            <p>Rating: {{review.rating}}</p>
+                            {%endfor%}
+                    </div>
+                </ul>
+            </li>
+        <hr/>
+        {%endfor%}
+    </ol>
+   <!-- You can loop through films, display content, etc. -->
+</div>
+{% endblock %}
+
+
+
+</body>
+</html>
+
+
